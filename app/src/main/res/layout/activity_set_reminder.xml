@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FADFDF"
+    tools:context=".SetReminder">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Set Reminder"
+        android:textAllCaps="true"
+        android:textColor="#881F1F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:text="Title"
+        android:textColor="#AE320A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/titleE"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Description"
+        android:textColor="#AE320A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/dateT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="68dp"
+        android:text="Date"
+        android:textColor="#AE320A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/timeT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Time"
+        android:textColor="#AE320A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/dateT"
+        app:layout_constraintTop_toBottomOf="@+id/dateT" />
+
+    <EditText
+        android:id="@+id/titleE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="enter the title"
+        android:inputType="textPersonName"
+        android:textColor="#372424"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <EditText
+        android:id="@+id/descE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter the description"
+        android:inputType="textPersonName"
+        android:textColor="#422D2D"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/titleE"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <Button
+        android:id="@+id/dateB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="dateClick"
+        android:text="set date"
+        android:textColor="#1C1A1A"
+        app:icon="@android:drawable/ic_menu_my_calendar"
+        app:iconTint="#F4F0C5"
+        app:layout_constraintBottom_toBottomOf="@+id/dateT"
+        app:layout_constraintEnd_toEndOf="@+id/descE"
+        app:layout_constraintTop_toTopOf="@+id/dateT" />
+
+    <Button
+        android:id="@+id/timeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="timeClick"
+        android:text="set Time"
+        android:textColor="#090808"
+        app:icon="@android:drawable/ic_lock_idle_alarm"
+        app:iconSize="30dp"
+        app:iconTint="#E8DE86"
+        app:layout_constraintBottom_toBottomOf="@+id/timeT"
+        app:layout_constraintEnd_toEndOf="@+id/dateB"
+        app:layout_constraintTop_toTopOf="@+id/timeT" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:onClick="addClick"
+        android:text="Add"
+        android:textSize="20sp"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconSize="40dp"
+        app:iconTint="#FAEE88"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
